@@ -1,7 +1,14 @@
 import React from 'react'
 import './LoginSignup.css'
+import { useNavigate } from 'react-router'
 
 const LoginSignup = () => {
+  const navigate = useNavigate()
+
+  const onClick = ()=>{
+    navigate("/sign-up")
+  }
+
   return (
     <div className='login-container'>
         <div className='login-text'>
@@ -14,6 +21,9 @@ const LoginSignup = () => {
         <div>
             <button>Login</button>
         </div>
+        <button onClick={onClick}>
+          Sign up
+        </button>
     </div>
   )
 }
